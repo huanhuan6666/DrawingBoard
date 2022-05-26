@@ -149,6 +149,14 @@ public class MainWindow extends JFrame {
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_Z, KeyEvent.CTRL_MASK), JComponent.WHEN_IN_FOCUSED_WINDOW);
 
+        toolBar.toolButtons[9].addActionListener(e -> { // 帮助按钮
+            try {
+                Desktop.getDesktop().browse(
+                        new java.net.URI("https://github.com/huanhuan6666/DrawingBoard"));
+            } catch (Exception ignored) {
+            }
+        });
+
         colorPanel = new MyColorPanel();
         add(colorPanel, BorderLayout.WEST);
 

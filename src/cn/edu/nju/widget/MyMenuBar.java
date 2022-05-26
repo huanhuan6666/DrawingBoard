@@ -234,7 +234,7 @@ public class MyMenuBar extends JMenuBar implements Subject {
             if (file == null) {
                 JOptionPane.showMessageDialog(null, "没有选择文件");
             } else {
-                //选中了相应的文件，则柑橘选中的文件创建对象输入流
+                //选中了相应的文件，则选中的文件创建对象输入流
                 FileInputStream fis = new FileInputStream(file);
                 ObjectInputStream ois = new ObjectInputStream(fis);
                 //将读出来的对象转换成父类对象的容器进行接收

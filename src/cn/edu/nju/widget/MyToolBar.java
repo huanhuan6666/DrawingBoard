@@ -7,8 +7,8 @@ import java.util.Objects;
 public class MyToolBar extends JToolBar implements Observer{
     private final String[] images = {"/icon/Line.png", "/icon/Circle.png", "/icon/Ellipse.png",
                                     "/icon/Triangle.png", "/icon/Rectangle.png", "/icon/text.png",
-                                    "/icon/copy.png", "/icon/Trash.png", "/icon/back.png", };
-    private final String[] tipText = {"直线", "圆形", "椭圆", "三角形", "矩形", "文本", "复制", "删除", "撤回", };
+                                    "/icon/copy.png", "/icon/Trash.png", "/icon/back.png", "/icon/Help.png", };
+    private final String[] tipText = {"直线", "圆形", "椭圆", "三角形", "矩形", "文本", "复制", "删除", "撤回", "帮助"};
 
     public JButton[] toolButtons = new JButton[images.length];  // 工具按钮
 

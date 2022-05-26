@@ -6,3 +6,7 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+# 测试的图片和可读格式文件
+*.jpg
+*.my
