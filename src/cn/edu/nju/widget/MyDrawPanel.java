@@ -163,7 +163,7 @@ public class MyDrawPanel extends JPanel {
                 MainWindow.setCurrentMode("null");
                 setCursor(Cursor.getDefaultCursor());
                 System.out.println("shape's count " + shapes.size());
-            } else if (e.getButton() == MouseEvent.BUTTON3) { // 点击鼠标右键
+            } else if (e.getButton() == MouseEvent.BUTTON3 && !chosenShapes.isEmpty()) { // 点击鼠标右键
                 String input;
                 int w, h;
                 try {

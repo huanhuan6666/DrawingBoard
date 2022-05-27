@@ -1,4 +1,4 @@
-#  <img src=".\src\icon\icon.png" alt="icon" style="zoom:25%;" />  实验报告
+#  <img src=".\reportImage\icon.png" alt="icon" />  实验报告
 
 ## 一、引言
 
@@ -356,7 +356,7 @@ toolBar.toolButtons[8].addActionListener(e -> {
 
 #### 1.4 观察者模式
 
-皮肤的设置我的实现就是换背景颜色`setBackGround(Color)`。`MyMenuBar`菜单栏作为被观察对象，被其`attach`的观察者有：
+皮肤的设置我的实现就是换背景颜色`setBackGround(Color)`。`MyMenuBar`菜单栏作为被观察对象，被其`attach`注册的观察者有：
 
 * 所有菜单`MyMenu`和菜单项`MyMenuItem`（构造函数中注册
 
@@ -365,10 +365,12 @@ toolBar.toolButtons[8].addActionListener(e -> {
 点击某些菜单项则通知观察者改变皮肤或者字体，如下代码所示：
 
 ```java
+// 改变皮肤为"spring"风格
 Spring.addActionListener(e -> {
     skin = "spring";
     notifySkinObservers(skin);
 });
+// 改变界面字体为微软雅黑
 YaHei.addActionListener(e -> {
     Font font = new Font("微软雅黑", Font.PLAIN, getFontSize());
     notifyFontObservers(font);
@@ -429,11 +431,13 @@ try {
 * 可以自定义设置画笔颜色；
 * 支持导出图片。
 
-### 界面展示
+双击Jar包`Paint.jar`即可运行。
+
+### 1. 界面展示
 
 <img src=".\reportImage\GUI.png" alt="image-20220527015003642" style="zoom: 50%;" />
 
-### 功能演示
+### 2. 功能演示
 
 * 绘制图形时，首先在工具栏选中需要的图形然后**单击鼠标**即可绘制
 
@@ -469,11 +473,29 @@ try {
 
 * 支持保存可存储文件，点击菜单栏保存或者Ctrl+S快捷键；同样支持加载可存储文件，点击菜单栏打开或者Ctrl+O快捷键；支持导出图片，点击菜单栏导出图片或者Ctrl+I快捷键。
 
-  > 可存储文件的默认格式为`.my`后缀
+  > 可存储文件格式后缀为`.my`
 
 演示如下：
 
 <img src=".\reportImage\fileshow_.gif" alt="shapeUML" style="zoom:50%;" />
 
-* 支持图元（包括组合图元）删除，选中图元后点击删除按钮或者Ctrl+D快捷键；
+* 支持图元（包括组合图元）删除，选中图元后点击删除按钮或者Ctrl+D快捷键；点击帮助按钮，会跳转到github页面，演示如下：
 
+<img src=".\reportImage\delete_.gif" alt="shapeUML" style="zoom:50%;" />
+
+
+
+## 五、小结
+
+这是我第一次用Java写完整项目（大数据用的Hadoop基本是填框架
+
+关于Swing的使用参考了很多资料，面向对象思想是一致的，但Java写起来比C++方便点，比如不用垃圾回收，还有就是引用类型和C++区别很大，但是避免了区分指针和引用变量（🤭
+
+
+
+
+Contact with me:
+
+📫2659428453@qq.com
+
+🔗[Github](https://github.com/huanhuan6666/DrawingBoard)
